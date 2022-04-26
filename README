@@ -1,0 +1,42 @@
+---------------------------------------------------------------
+Project : Websocket Connection
+Context : Algorithmic Trading
+Purpose : Apply a Trading Algorithm to a Live price stream
+Users : Quantitative Traders / Developers
+Author : Claudio Catalani
+---------------------------------------------------------------
+
+1. Requirements
+
+    apply agile method
+    create a websocket connection
+    store last 100 prices
+    compute a technical analysis signal
+    log operations
+    use a container
+    'break the glass' button
+    handle special cases
+    
+2. Design
+    
+   Facade on trading complexity
+   use a Deque to store price values
+
+3. Implementation
+
+    Test Driven Development:
+        
+        Test Cases :
+            - stablish a websocket connection
+            - compute technical indicator on_message
+            - trigger orders with on_message
+            
+
+4. Verification
+
+    Verification happens as code is implemented
+    
+    
+5. Deploy & Maintenance
+
+    Deploy in a docker server
