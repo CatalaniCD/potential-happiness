@@ -40,6 +40,7 @@ The Kline/Candlestick Stream push updates to the current klines/candlestick ever
 
 import websocket
 import json
+import time
 import datetime
 from collections import deque
 import pandas as pd
@@ -129,8 +130,21 @@ def test_Websocket():
     
     ws.stream('btcusdt', '1m')
 
-    
+    pass
 
+def test_TradingSocket():
+    
+    td = TradingSocket(socket = wss)
+    
+    td.stream('ethusdt', '1m')
+    
+    time.sleep(45)
+    
+    pd.DataFrame(td.get_memory())['Close'].plot(grid = True)
+    
+    pass
+   
+    
 if __name__ == '__main__':
     
 
